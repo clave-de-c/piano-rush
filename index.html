@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Rush</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-container">
+        <header class="game-header">
+            <button id="quit-button" class="header-btn quit-btn" title="Sair do Jogo">🚪</button>
+            <h1>Piano Rush</h1>
+            <button id="show-leaderboard-btn" class="header-btn ranking-btn" title="Ranking">🏆</button>
+            <div class="hud">
+                <div class="hud-item">
+                    <span>PONTOS</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="hud-item">
+                    <span>NÍVEL</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="hud-item">
+                    <span>VIDAS</span>
+                    <div id="lives">
+                        <span>♥</span><span>♥</span><span>♥</span>
+                    </div>
+                </div>
+            </div>
+            <div class="special-bar-container">
+                <div id="special-bar"></div>
+            </div>
+        </header>
+
+        <div id="note-track"></div>
+        <div id="level-up-alert" class="hidden">Level Up!</div>
+        <div id="piano-keyboard"></div>
+    </div>
+
+    <div id="start-game-over-screen" class="modal-screen">
+        <div class="modal-content">
+            <h2 id="modal-title">Bem-vindo(a)!</h2>
+            <p id="modal-text">Toque na tecla correta antes que a nota suma!</p>
+            <div id="score-input-container" class="hidden">
+                <span id="final-score" class="final-score-text">0</span>
+                <input type="text" id="player-name" placeholder="Seu nome aqui" maxlength="15">
+            </div>
+            <div id="mode-selection-container">
+                <button id="start-normal-button" class="mode-btn">Modo Normal</button>
+                <button id="start-challenge-button" class="mode-btn challenge">Modo Desafio ♯/♭</button>
+            </div>
+            <button id="save-score-button" class="hidden">Salvar Pontuação</button>
+        </div>
+    </div>
+
+    <div id="leaderboard-modal" class="modal-screen">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>🏆 Ranking - Melhores Pontuações</h2>
+            <ol id="leaderboard-list"></ol>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Desenvolvido por <strong>Clave de C</strong></p>
+        <div class="footer-links">
+            <a href="https://www.clavedec.com.br" target="_blank">www.clavedec.com.br</a>
+            <span>|</span>
+            <a href="https://www.instagram.com/clavedec.oficial" target="_blank">@clavedec.oficial</a>
+        </div>
+    </footer>
+
+</body>
+</html>
